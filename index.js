@@ -1,26 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
+
+import Routes from './config/Routes';
 import './style.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
-}
-
-render(<App />, document.getElementById('root'));
+render(<Routes />, document.getElementById('root'));
