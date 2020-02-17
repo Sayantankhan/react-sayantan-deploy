@@ -1,15 +1,16 @@
 import auth0 from 'auth0-js';
 
 import history from './history';
+import configdata from '../data/config';
 
 export default class Auth {
   // Please use your own credentials here
   auth0 = new auth0.WebAuth({
-    domain: 'sayantankhan.auth0.com',
-    clientID: 'wYuuTnF3V7YTUNnQbgOEkexWg4MVY2Hg',
-    redirectUri: 'https://react-sayantan-deploy.stackblitz.io/callback',
-    responseType: 'token id_token',
-    scope: 'openid'
+    domain: configdata.auth0.domain,
+    clientID: configdata.auth0.clientID,
+    redirectUri: configdata.auth0.redirectUri,
+    responseType: configdata.auth0.responseType,
+    scope: configdata.auth0.scope
   });
 
   login = () => {
