@@ -7,7 +7,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'sayantankhan.auth0.com',
     clientID: 'wYuuTnF3V7YTUNnQbgOEkexWg4MVY2Hg',
-    redirectUri: 'https://react-sayantan-deploy.stackblitz.io',
+    redirectUri: 'https://react-sayantan-deploy.stackblitz.io/callback',
     responseType: 'token id_token',
     scope: 'openid'
   });
